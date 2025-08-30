@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color: rgb(0, 0, 0);
+            margin: 0pc;
+            overflow-x: hidden;
+            padding: 0pc;
+         
+        }
+   #background
+   {
+    width: 130vw;
+    height: 50vw;
+    object-fit: cover;
+    position: absolute;
+    left: 20vw;
+    z-index: -1;
+    filter: brightness(35%) blur(1px);
+    
+   }
+   main h1
+   {
+    font-size: 5.3vw;
+    width: 47vw;
+    color: rgb(255, 255, 255);
+ font-family: monospace;
+
+ position: absolute;
+ font-weight: 700;
+ left: 3vw;
+ top: 9vw;
+   }
+   main h6
+   {
+    color: rgb(207, 213, 227);
+    font-family:'Courier New', Courier, monospace;
+    position: absolute;
+    left: 3.4vw;
+    top: 30vw;
+    font-size: 1.2vw;
+   }
+   #one,#two,#three
+   {
+    position: absolute;
+   }
+   #one
+   {
+    font-size: 5vw;
+    rotate: 10deg;
+    z-index: 2;
+   }
+   #two
+   {
+    font-size: 3vw;
+    rotate: 7deg;
+    left: 0.2vw;
+    top: 0vw;
+    z-index: 1;
+   }
+   #three
+   {
+       font-size: 2.5vw;
+    rotate: 10deg;
+    left: 3vw;
+    top: 0.5vw;
+    z-index: 1;
+   }
+   #emojis
+   {
+    position: absolute;
+    left: 24vw;
+    top: 12vw;
+   }
+  #first
+   {
+    background-color: rgb(109, 1, 139);
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 100;
+    width: 15vw;
+    height: 3vw;
+    position: absolute;
+    top: 38vw;
+    left: 3.2vw;
+    font-size: 0.9vw;
+   }
+   #second
+   {
+    color: white;
+    background-color: rgb(0, 107, 18);
+    width: 12vw;
+    height: 3vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: absolute;
+    left: 20vw;
+    top: 38vw;
+        font-size: 0.9vw;   
+
+   }
+   #scroller {
+  position: absolute;
+  z-index: 2;
+  display: inline;
+  right: 12vw;
+  top: 45vw;
+}
+
+.scroll_elements {
+  font-size: 2vw;
+  position: absolute;
+  color: white;
+}
+
+.scroll_elements:hover {
+  cursor: pointer;
+}
+
+#element1 {
+  left: 2vw;
+}
+
+#element2 {
+  left: 6vw;
+}
+
+#element3 {
+  left: 10vw;
+}
+
+#element4 {
+  left: 14vw;
+}
+nav
+{
+    width: 99%;
+    height: 3.3vw;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+     position: fixed;
+     background-color: black;
+    gap: 3.2vw;
+    padding-right: 1%;
+}
+nav h1
+{
+    
+  font-family:'Courier New', Courier, monospace;
+    font-weight: 300;
+    font-size: 1.15vw;
+
+   
+}
+nav h1:hover 
+{
+    cursor: pointer;
+
+}
+#logo
+{
+    position: absolute;
+    left:2vw;
+    width: 4.5vw;
+}
+    </style>
+
+</head>
+<body>
+    <nav>
+        <h1>Home</h1>
+        <h1>Achievements</h1>
+        <h1>About Us</h1>
+        <h1 id="contact">Contact Us</h1>
+        <img src="AI.png" alt="" id="logo">
+    </nav>
+    <main>
+        <video src="background_video.mp4" alt=""  id="background" autoplay muted loop></video>
+            <h1>Smarter Intelligence For Real Progress</h1>
+            <h6>Where advanced technology meets human creativity.</h6>
+            <div id="emojis">
+                <b id="one">🔺</b>
+                <b id="two">🔺</b>
+                <b id="three">🔺</b>
+            </div>
+            <button id="first">Learn More</button>
+            <button id="second">Keep Scrolling</button>
+          <ul id="scroller">
+    <li class="scroll_elements" id="element1"  onclick="next(1)"></li>
+    <li class="scroll_elements" id="element2"  onclick="next(2)"></li>
+    <li class="scroll_elements" id="element3"  onclick="next(3)"></li>
+    <li class="scroll_elements" id="element4"  onclick="next(4)"></li>
+  </ul>
+    </main>
+    
+</body>
+<script src="main.js"></script>
+</html>
